@@ -15,7 +15,7 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 KEYWORDS = [
     # Core hot coffee drinks
     "espresso",
-    "americano"
+    "americano",
     "cappuccino",
     "latte",
     "flat white",
