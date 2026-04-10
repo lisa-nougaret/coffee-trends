@@ -13,22 +13,47 @@ RAW_DIR = Path("data/raw")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 KEYWORDS = [
+    # Core hot coffee drinks
     "espresso",
+    "americano"
     "cappuccino",
     "latte",
-    "americano",
-    "iced coffee",
-    "iced latte",
-    "cold brew",
-    "frappuccino",
     "flat white",
+    "mocha",
+
+    # Core cold coffee drinks
+    "iced coffee",
+    "cold brew",
+    "iced latte",
+    "iced americano",
+
+    # Flavoured lattes
+    "vanilla latte",
+    "caramel latte",
+    "hazelnut latte",
+
+    # Seasonal or limited-time offerings
     "pumpkin spice latte",
     "peppermint mocha",
     "gingerbread latte",
+
+    # Frappuccinos / desserts
+    "frappuccino",
+    "caramel frappuccino",
+    "mocha frappuccino",
+
+    # Macchiato drinks
     "caramel macchiato",
-    "matcha latte",
+    "iced caramel macchiato",
+
+    # Niche or emerging trends
     "dalgona coffee",
     "mushroom coffee",
+
+    # Other brewing methods
+    "pour over coffee",
+    "french press coffee",
+    "drip coffee"
 ]
 
 def chunk_keywords(keywords: list[str], chunk_size: int = 5) -> list[list[str]]:
