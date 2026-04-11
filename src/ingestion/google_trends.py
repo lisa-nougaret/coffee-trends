@@ -67,9 +67,9 @@ def normalize_geo(geo: str) -> str:
 def normalize_timeframe(timeframe: str) -> str:
     timeframe = timeframe.strip()
 
-    if timeframe == "today 10-y":
+    if timeframe == "today 20-y":
         end_date = date.today()
-        start_date = end_date - timedelta(days=365 * 10)
+        start_date = end_date - timedelta(days=365 * 20)
         return f"{start_date:%Y-%m-%d} {end_date:%Y-%m-%d}"
 
     return timeframe
@@ -133,7 +133,7 @@ def request_interest_over_time(
 
 def fetch_interest_over_time(
     keywords: list[str],
-    timeframe: str = "today 10-y",
+    timeframe: str = "today 20-y",
     geo: str = "",
     hl: str = "en-US",
     tz: int = 360,
@@ -239,7 +239,7 @@ def save_raw(df: pd.DataFrame) -> Path:
 def run_ingestion(
     keywords: list[str] = KEYWORDS,
     chunk_size: int = 5,
-    timeframe: str = "today 10-y",
+    timeframe: str = "today 20-y",
     geo: str = "",
     hl: str = "en-US",
     tz: int = 360,
